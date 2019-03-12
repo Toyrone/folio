@@ -5,6 +5,11 @@
 .hero {
     margin-left: 50px;
     max-width: 80%;
+    &--sm {
+        @media #{$mobile} {
+            margin-left: 25px;
+        }  
+    }
     .primary {
         font-size: 48px;
         @media #{$mobile} {
@@ -12,6 +17,10 @@
         }
         &--lg {
             font-size: 60px;
+            @media #{$mobile} {
+                font-size: 44px;
+                font-weight: bold;
+             }
         }
     }
     &--centered {
@@ -46,6 +55,9 @@
 .section {
     min-height: 50vh;
     padding: 80px 0;
+    @media #{$mobile} {
+        padding: 40px 0;
+    }
 }
 
 .contact {
@@ -77,6 +89,11 @@
     margin-bottom: 10px; 
     &__wrapper {
         margin: 20px;
+        h4 {
+            @media #{$mobile} {
+                font-size: 1.2rem;
+            }
+        }
     }
     &:before {
         position: absolute;
@@ -101,30 +118,48 @@
 .title {
     text-align: center;
     font-weight: 600;
+    
 }
 
 .works {
     margin-top: 50px;
+    h2 {
+        font-size: 1.5rem;
+    }
+    @media #{$mobile} {
+        margin-top: 20px;
+    }
     &__wrapper {
         padding-top: 80px;
     }
     &__img {
-        border-radius: 6px;
+        border-radius: 6px 6px 0 0;
         overflow: hidden;
         max-height: 400px;
         img {
             width: 100%;
             max-width: 50vw;
+            object-fit: contain;
+            @media #{$mobile} {
+                // max-height: 150px;
+            }
         }
     }
     &__body {
         margin-left: 40px;
+        @media #{$mobile} {
+            margin-left: 20px;
+            padding-top: 20px;
+        }
         .links__item {
             margin-left: 0;
             padding-left: 0;
         }
         p {
             font-size: 44px;
+            @media #{$mobile} {
+                font-size: 18px;
+            }
         }
     }
     &__wrapper {
@@ -142,6 +177,7 @@
         }
         @media #{$mobile} {
             flex-direction: column;
+            margin-bottom: 20px;
         }
     }
 }
@@ -158,8 +194,29 @@
     .title {
         margin-top: 50px;
         padding-bottom: 30px;
+        @media #{$mobile} {
+            margin-top: 0px;
+            font-size: 24px;
+         }
     }
     .works__img {
         flex: 0 1 20%;
+        text-align: center;
+        box-shadow: -9px 10px 44px 0px rgba(235,235,235,0.75);
+        @media #{$mobile} {
+            max-height: 300px;
+            margin-bottom: 15px;
+            box-shadow: none;
+        }
+        img {
+            @media #{$mobile} {
+                width: 100%;
+                max-width: 50vw;
+                object-fit: cover;
+                overflow: hidden;
+                border-radius: 6px;
+                box-shadow: -9px 10px 44px 0px rgba(235,235,235,0.75);
+            }
+        } 
     }
 }
