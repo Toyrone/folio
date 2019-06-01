@@ -28,7 +28,8 @@
             }
         }
         a {
-            position: relative;
+			position: relative;
+			font-weight: bold;
             &:after {
                 content: '';
                 position: absolute;
