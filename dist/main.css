@@ -59,7 +59,8 @@ body {
         transition: all 0.5s;
         width: 100%; }
     .links__item a {
-      position: relative; }
+      position: relative;
+      font-weight: bold; }
       .links__item a:after {
         content: '';
         position: absolute;
@@ -234,10 +235,10 @@ header {
     .works__body .links__item {
       margin-left: 0;
       padding-left: 0; }
-    .works__body p {
+    .works__body h5 {
       font-size: 44px; }
       @media screen and (max-width: 640px) {
-        .works__body p {
+        .works__body h5 {
           font-size: 18px; } }
   .works__wrapper {
     padding: 40px; }
